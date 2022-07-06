@@ -12,6 +12,7 @@ export default new Proxy(
       else if (Object.values(this.databases).includes(db)) return db
       else {
         this.databases[db] = new this.Constructor(db, options)
+        
         this.databases[db].on('destroyed', () => {
           delete this.databases[db]
         });

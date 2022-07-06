@@ -101,7 +101,7 @@ export default {
             })
             .on('error', console.error);
             
-            db.on('destroyed', () => {
+            db.on('unmounted', () => {
               this.$data[key] = aggregateCache = [];
             })
         },
@@ -112,7 +112,7 @@ export default {
     })
   },
   // tear down the liveFeed objects
-  beforeDestroy() {
+  beforeUnmount() {
     Object.keys(this._liveFeeds).map(lfKey => {
       this._liveFeeds[lfKey].cancel()
     })

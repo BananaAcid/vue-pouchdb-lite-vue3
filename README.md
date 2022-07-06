@@ -1,4 +1,4 @@
-# Vue PouchDB Lite
+# Vue3 PouchDB Lite
 
 A really lite Vue plugin to get your PouchDB databases in every instance.
 
