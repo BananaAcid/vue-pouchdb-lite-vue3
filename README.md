@@ -2,6 +2,42 @@
 
 A really lite Vue plugin to get your PouchDB databases in every instance.
 
+## Vue3 TS compatibility
+
+For databases in templates, the objects can be defined beforehand.
+See https://vuejs.org/guide/typescript/options-api.html#augmenting-global-properties
+
+`augmentation.ts`
+```ts
+
+declare interface IUserDoc {
+    _id: string,
+    _rev?: string,
+    created: timestamp,
+
+    name: string,
+    type: 'user',  // fixed string
+    roles: 
+        ('user' | 'admin')[]  // a combination of these
+    ,
+
+    password?: string,
+    
+    password_scheme?: 'pbkdf2',
+    iterations?: number,
+    derived_key?: string,
+    salt?: string
+}
+
+export { };
+    
+declare module 'vue' {
+    interface ComponentCustomProperties {
+        usersDb: IUserDoc[],
+    }
+}
+```
+
 ##### Some content extracted from https://github.com/MDSLKTR/pouch-vue with a lot of api changes though.
 
 ## Why another library ?
