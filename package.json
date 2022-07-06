@@ -1,6 +1,6 @@
 {
-  "name": "vue-pouchdb-lite",
-  "version": "0.9.3",
+  "name": "vue3-pouchdb-lite",
+  "version": "0.9.4",
   "description": "Lite PouchDB plugin for Vuejs",
   "main": "dist/main.js",
   "module": "src/index.js",
@@ -11,10 +11,13 @@
     "publish": "yarn publish"
   },
   "author": "Elmatou <elmatou@gmail.com>",
+  "contributors": [
+    "Nabil Redmann <repo@bananaacid.de>"
+  ],
   "bugs": {
-    "url": "https://github.com/elmatou/vue-pouchdb-lite/issues"
+    "url": "https://github.com/BananaAcid/vue3-pouchdb-lite/issues"
   },
-  "homepage": "https://github.com/elmatou/vue-pouchdb-lite",
+  "homepage": "https://github.com/BananaAcid/vue3-pouchdb-lite",
   "license": "MIT",
   "private": false,
   "devDependencies": {
