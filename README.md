@@ -38,6 +38,8 @@ declare module 'vue' {
 }
 ```
 
+Note: For me, because of outdated dependencies of dependencies, I had to `npm i BananaAcid/vue-pouchdb-lite-vue3 --force` to get my updated version installed.
+
 ##### Some content extracted from https://github.com/MDSLKTR/pouch-vue with a lot of api changes though.
 
 ## Why another library ?
